@@ -24,8 +24,8 @@
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 }
-.animate-bounce-left:hover {
-  animation: bounce-left 1s infinite;
+.animate-bounce-left {
+  animation: bounce-left 3s infinite;
 }
 @keyframes bounce-right {
   0%,
@@ -38,6 +38,36 @@
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 }
-.animate-bounce-right:hover {
-  animation: bounce-right 1s infinite;
+.animate-bounce-right {
+  animation: bounce-right 3s infinite;
+}
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5 {
+  @apply absolute;
+}
+.card-4,
+.card-3 {
+  @apply scale-50 absolute z-10 opacity-30;
+}
+.card-4 {
+  @apply -translate-x-1/2;
+}
+.card-3 {
+  @apply translate-x-1/2;
+}
+.card-2,
+.card-5 {
+  @apply scale-75 absolute z-20  opacity-70;
+}
+.card-5 {
+  @apply -translate-x-1/4;
+}
+.card-2 {
+  @apply translate-x-1/4;
+}
+.card-1 {
+  @apply z-30;
 }

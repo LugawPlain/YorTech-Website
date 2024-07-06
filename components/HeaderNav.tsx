@@ -24,7 +24,7 @@ const HeaderNav = () => {
 
   return (
     <header
-      className={`header-nav flex justify-between flex-wrap sticky z-10 h-20 top-0 text-white overflow-hidden`}
+      className={`header-nav flex justify-between flex-wrap sticky z-50 h-20 top-0 text-white overflow-hidden`}
     >
       <div
         className={`absolute  bg-[#0d0f1c] transition-all duration-1000 w-full origin-top h-full  left-0 -z-10 ${
