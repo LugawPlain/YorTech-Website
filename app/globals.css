@@ -50,7 +50,7 @@
 }
 .card-4,
 .card-3 {
-  @apply scale-50 absolute z-10 opacity-30;
+  @apply scale-50 absolute z-10 opacity-30 brightness-50;
 }
 .card-4 {
   @apply -translate-x-1/2;
@@ -60,7 +60,7 @@
 }
 .card-2,
 .card-5 {
-  @apply scale-75 absolute z-20  opacity-70;
+  @apply scale-75 absolute z-20  opacity-70 brightness-75;
 }
 .card-5 {
   @apply -translate-x-1/4;
@@ -70,4 +70,26 @@
 }
 .card-1 {
   @apply z-30;
+}
+
+@keyframes left-to-right {
+  0%,
+  100% {
+    transform: translate(-100px);
+    background-image: linear-gradient(to left, #e5ab47, #fde10c, #4b5563);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  99% {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 255, 238),
+      rgb(98, 174, 255),
+      #4b5563
+    );
+  }
+}
+.animate-left-to-right {
+  animation: left-to-right 4s linear infinite;
 }

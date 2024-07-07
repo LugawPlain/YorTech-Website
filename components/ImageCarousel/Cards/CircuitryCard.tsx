@@ -1,16 +1,16 @@
+import EspressifLogo from "@/components/svgs/Espressif-logo";
+import LedLogo from "@/components/svgs/Led-Logo";
 import React from "react";
 
 type props = {
   className?: string;
 };
-const MicrocontrollerCard: React.FC<props> = ({
-  className = "w-[960px] h-[575px]",
-}) => {
+const CircuitryCard: React.FC<props> = ({ className = " " }) => {
   return (
     <div
-      className={`  mx-auto rounded-2xl border border-t-2 shadow-2xl drop-shadow-2xl mb-4 transition-all duration-300 px-4 ${className}`}
+      className={`w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-t-2 shadow-2xl mb-4 transition-all duration-300 px-4 ${className}`}
     >
-      <h1 className="text-[48px] font-meduim mx-auto text-center py-4">
+      <h1 className="text-[48px] w-fit font-meduim mx-auto text-center py-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-black to-red-400">
         Micro-Controllers
       </h1>
       <div className="flex 2xl:gap-24 justify-center xl:gap-12 gap-4">
@@ -40,11 +40,6 @@ const MicrocontrollerCard: React.FC<props> = ({
               Controlling components using a simple arduino board
             </h3>
           </div>
-          <div className="h-16 flex justify-center items-center py-12 text-nowrap">
-            <button className="bg-gradient-to-b from-[#006d70] to-[#184143] py-2 px-8 rounded-2xl text-white text-xl font-semibold">
-              Learn More &gt;&gt;
-            </button>
-          </div>
         </div>
         {/* espcard */}
         <div className="flex w-64 flex-col items-center ">
@@ -54,12 +49,7 @@ const MicrocontrollerCard: React.FC<props> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="hover:scale-125 transition-all ease-in-out duration-300 "
-                src="./Esp32-Logo.png"
-                width={"80px"}
-                height={"80px"}
-              ></img>
+              <EspressifLogo className="hover:scale-125 transition-all ease-in-out duration-300 " />
             </a>
           </div>
           <div className="bg-black w-full h-12 flex items-center justify-center rounded-md">
@@ -71,11 +61,6 @@ const MicrocontrollerCard: React.FC<props> = ({
             <h3 className="py-4 pt-8 text-center text-xl font-medium">
               Built-In Wi-fi And Bluetooth For Internet of Things integration
             </h3>
-          </div>
-          <div className="h-16 flex justify-center items-center py-12 text-nowrap">
-            <button className="bg-gradient-to-b from-gray-600 to-gray-950 py-2 px-8 rounded-2xl text-white text-xl font-semibold">
-              Learn More &gt;&gt;
-            </button>
           </div>
         </div>
         {/* rpicard */}
@@ -104,15 +89,20 @@ const MicrocontrollerCard: React.FC<props> = ({
               More Complex Embedded Systems,Web Centers and Robotics
             </h3>
           </div>
-          <div className="h-16 flex justify-center items-center py-12 text-nowrap ">
-            <button className="bg-gradient-to-b from-green-100 via-red-500  to-red-700 py-2 px-8 rounded-2xl text-white text-xl font-semibold">
-              Learn More &gt;&gt;
-            </button>
-          </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <button
+          className="group bg-neutral-800 px-4 pr-12 rounded-2xl py-4 h-fit underline decoration-1 decoration-white text-white underline-offset-2 outline outline-white -outline-offset-4 outline-1 
+        hover:transition-all hover:duration-300 hover:decoration-2 hover:underline-offset-4  hover:outline-green-300 hover:text-green-300 hover:decoration-green-300 hover:bg-black
+        active:outline-2 active:duration"
+        >
+          <LedLogo className=" inline mr-8 " />
+          See more
+        </button>
       </div>
     </div>
   );
 };
 
-export default MicrocontrollerCard;
+export default CircuitryCard;

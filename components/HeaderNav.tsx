@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import LogoNoBg from "./Logo-no-bg";
+import LogoNoBg from "./svgs/Logo-no-bg";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 

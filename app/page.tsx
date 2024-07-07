@@ -1,7 +1,5 @@
 import Image from "next/image";
-import LogoNoBg from "@/components/Logo-no-bg";
 import Link from "next/link";
-import ArduinoLogo from "@/components/Arduino-logo";
 import HeaderNav from "@/components/HeaderNav";
 import ImageCarousel from "@/components/ImageCarousel/ImageCarousel";
 export default function Home() {
@@ -44,7 +42,10 @@ export default function Home() {
         </main>
       </div>
 
-      <div className="h-[700px] w-full bg-white-400 pt-4">
+      <div
+        className="h-[700px] w-full isolate relative pt-4
+      before:inset-0  before:absolute before:opacity-90 before:white "
+      >
         {/* microcontroller card */}
         <ImageCarousel />
       </div>
