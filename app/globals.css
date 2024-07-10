@@ -93,3 +93,17 @@
 .animate-left-to-right {
   animation: left-to-right 4s linear infinite;
 }
+.card-border {
+  background: conic-gradient(
+    from 115deg,
+    transparent 315deg,
+    rgb(244, 244, 132),
+    rgb(0, 247, 255),
+    rgb(207, 95, 114),
+    violet,
+    transparent
+  );
+}
+.fading-image {
+  mask-image: linear-gradient(transparent 5px, black 20%);
+}

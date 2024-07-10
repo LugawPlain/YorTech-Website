@@ -9,13 +9,13 @@ type props = {
   className?: string;
 };
 
-const CircuitryCard: React.FC<props> = ({ className = " " }) => {
+const Design3dCard: React.FC<props> = ({ className = " " }) => {
   return (
     <div
       className={`w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl shadow-2xl drop-shadow-2xl mb-4 transition-all duration-300 px-16 bg-gradient-to-b from-gray-400 from-1px via-white via-30% to-gray-400 to-99.9% ${className} `}
     >
       <h1 className="pt-4 text-[48px] w-fit font-meduim mx-auto font-mono text-center bg-clip-text text-black">
-        Circuitry
+        3d Design and Modeling
       </h1>
       <div className=" w-fit">
         <CircuitryLogo />
@@ -47,4 +47,4 @@ const CircuitryCard: React.FC<props> = ({ className = " " }) => {
   );
 };
 
-export default CircuitryCard;
+export default Design3dCard;
