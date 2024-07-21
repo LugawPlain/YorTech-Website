@@ -40,8 +40,8 @@ const ImageCarousel = () => {
         />
         <WebsiteCard className={`bg-white shadow-amber-200 card-${array[1]}`} />
         <CircuitryCard className={`bg-white shadow-black card-${array[2]}`} />
-        <Design3dCard className={`bg-white card-${array[3]}`} />
-        <WebsiteCard className={`bg-white-500 card-${array[4]}`} />
+        <Design3dCard className={`bg-white shadow-red-500 card-${array[3]}`} />
+        <WebsiteCard className={`bg-white  card-${array[4]}`} />
       </div>
       <div className="mx-auto flex justify-center items-center gap-4">
         <button
