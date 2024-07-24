@@ -19,7 +19,7 @@ const WebsiteCard: React.FC<Props> = ({ className = " " }) => {
     <div
       className={`w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-gray-300 shadow-2xl drop-shadow-2xl mb-4 transition-all duration-300 px-16 ${className}`}
     >
-      <h1 className="text-[48px] font-bold mx-auto text-center py-4  bg-clip-text bg-gradient-to-b from-yellow-100 to-yellow-600 text-transparent">
+      <h1 className="text-[48px] font-bold mx-auto text-center py-4 bg-clip-text bg-gradient-to-b from-yellow-100 to-yellow-600 text-transparent">
         Website Development
       </h1>
       <div className="flex justify-center items-center h-32 mb-8 gap-2">

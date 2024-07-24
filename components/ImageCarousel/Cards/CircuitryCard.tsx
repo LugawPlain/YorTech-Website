@@ -14,7 +14,7 @@ const CircuitryCard: React.FC<props> = ({ className = " " }) => {
     <div
       className={`w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl shadow-2xl drop-shadow-2xl mb-4 transition-all duration-300 px-16 ${className} `}
     >
-      <h1 className="pt-4 text-[48px] w-fit font-meduim mx-auto font-mono text-center bg-clip-text text-black">
+      <h1 className="pt-4 text-[68px] w-fit font-bold mx-auto font-mono text-center bg-clip-text text-stone-900 text-shadow">
         Circuitry
       </h1>
       <div className=" w-fit">

@@ -10,6 +10,9 @@
   --background: 0, 0, 0;
   --textcolor: 255, 255, 255;
 }
+.text-shadow{
+  text-shadow: 6px 8px rgb(202, 199, 199);
+}
 .hovertext {
   @apply duration-200 hover:scale-125 ease-in-out;
 }
