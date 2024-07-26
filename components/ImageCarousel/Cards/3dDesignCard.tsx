@@ -14,11 +14,13 @@ const Design3dCard: React.FC<props> = ({ className = " " }) => {
     <div
       className={`overflow-hidden flex w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px]  border border-gray-300 mx-auto rounded-2xl shadow-2xl mb-4 transition-all duration-300  ${className} `}
     >
-      
+      <div className="flex flex-col">
       <h1 className="pt-4 text-[48px] w-fit font-meduim mx-auto font-mono text-center bg-clip-text text-black px-16">
         3d Design and Modeling
       </h1>
-      <img className="scale-75" src="/3dexample.png"></img>
+      <h2>Designing complex engineering structures for analysis, visualization and simulation</h2>
+      </div>
+      <img className="scale-75" src="/3dexamples.png"></img>
     </div>
   );
 };
