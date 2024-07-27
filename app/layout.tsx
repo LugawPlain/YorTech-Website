@@ -31,7 +31,7 @@ export default function RootLayout({
             <div className="flex flex-col justify-center items-center mb-4"> 
             <LogoNoBg className="scale-150 mb-4" />
               <p>
-              Suggestion are appreciated 😊. Email this <a href="#" className="text-blue-300">troysarinas22@gmail.com</a>
+              Suggestion are appreciated 😊. Email this <a href="#" className="text-blue-300">yortech2024@gmail.com</a>
               </p>
               <p className="text-xs">Copyright <span className="text-cyan-500">© </span> 2024 Yortech</p>
               <p>

@@ -110,3 +110,38 @@
 .fading-image {
   mask-image: linear-gradient(transparent 5px, black 20%);
 }
+.animate-example3d{
+  animation: example3d 20s linear infinite;
+}
+@keyframes example3d {
+  0%,100%
+  {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 100%;
+  }
+  30%{
+    opacity: 100%;
+  }
+  35%{
+    opacity: 0%;
+  }
+}
+.example3d-item-1{
+
+}
+.example3d-item-2{
+  animation-delay: 6s;  
+}
+.example3d-item-3{
+  animation-delay: 10s;  
+}
+.example3d-item-4{
+  animation-delay: 14s;  
+}
+.text-stroke{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+    
+}
