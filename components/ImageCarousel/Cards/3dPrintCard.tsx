@@ -9,14 +9,14 @@ type props = {
   className?: string;
 };
 
-const Design3dCard: React.FC<props> = ({ className = " " }) => {
+const Print3dCard: React.FC<props> = ({ className = " " }) => {
   return (
     <div
       className={`overflow-hidden flex w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px]  border border-gray-300 mx-auto rounded-2xl shadow-2xl mb-4 transition-all duration-300  ${className} `}
     >
       <div className="flex flex-col w-1/2 px-12 font-medium">
       <h1 className="text-[48px] border-b border-red-300 font-bold text-stroke mx-auto text-center py-4 bg-clip-text bg-gradient-to-b from-red-600 to-red-300 text-transparent">
-        3d Design <br/> and Modeling
+        3d Printing
       </h1>
       <h2 className="text-lg mt-8">Designing complex engineering structures for analysis, visualization and simulation</h2>
       <div className="mt-44 px-8"
@@ -54,4 +54,4 @@ const Design3dCard: React.FC<props> = ({ className = " " }) => {
   );
 };
 
-export default Design3dCard;
+export default Print3dCard;

@@ -8,7 +8,7 @@ type props = {
 const MicrocontrollerCard: React.FC<props> = ({ className = " " }) => {
   return (
     <div
-      className={` overflow-hidden w-[960px]flex relative  min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-t-2 shadow-2xl mb-4 transition-all duration-300 px-4 ${className}`}
+      className={` overflow-hidden w-[960px]flex relative  min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-t-2 shadow-2xl mb-4 transition-all duration-300 px-16 ${className}`}
     >
       
       <h1 className="text-[48px] w-fit font-meduim mx-auto text-center py-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-black to-red-400">

@@ -5,6 +5,7 @@ import WebsiteCard from "./Cards/WebsiteCard";
 import LedLogo from "../svgs/Led-Logo";
 import CircuitryCard from "./Cards/CircuitryCard";
 import Design3dCard from "./Cards/3dDesignCard";
+import Print3dCard from "./Cards/3dPrintCard";
 const ImageCarousel = () => {
   const [array, setArray] = useState([1, 2, 3, 4, 5]);
 
@@ -41,7 +42,7 @@ const ImageCarousel = () => {
         <WebsiteCard className={`bg-white shadow-amber-200 card-${array[1]}`} />
         <CircuitryCard className={`bg-white shadow-black card-${array[2]}`} />
         <Design3dCard className={`bg-white shadow-red-500 card-${array[3]}`} />
-        <WebsiteCard className={`bg-white  card-${array[4]}`} />
+        <Print3dCard className={`bg-white  card-${array[4]}`} />
       </div>
       <div className="mx-auto flex justify-center items-center gap-4">
         <button
