@@ -2,15 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.light {
-  --background: 255, 255, 255;
-  --textcolor: 0, 0, 0;
+@layer base {
+  :root {
+    --primary: #ffffff;
+    --secondary: #000000;
+    --textColor: #000000;
+    --accent: #00edf6;
+    --accentLight: #e2e8f0;
+    --accentDark: ##64748b;
+  }
 }
 .dark {
-  --background: 0, 0, 0;
-  --textcolor: 255, 255, 255;
+  --primary: #000000;
+  --secondary: #ffffff;
+  --textColor: #ffffff;
+  --accent: #00edf6;
+  --accentLight: #e2e8f0;
+  --accentDark: ##64748b;
 }
-.text-shadow{
+.light {
+  --primary: #ffffff;
+  --secondary: #000000;
+  --textColor: #000000;
+  --accent: #00edf6;
+  --accentLight: #e2e8f0;
+  --accentDark: ##64748b;
+}
+
+.theme-light {
+}
+
+.text-shadow {
   text-shadow: 6px 8px rgb(202, 199, 199);
 }
 .hovertext {
@@ -110,38 +132,36 @@
 .fading-image {
   mask-image: linear-gradient(transparent 5px, black 20%);
 }
-.animate-example3d{
+.animate-example3d {
   animation: example3d 20s linear infinite;
 }
 @keyframes example3d {
-  0%,100%
-  {
+  0%,
+  100% {
     opacity: 0%;
   }
   10% {
     opacity: 100%;
   }
-  30%{
+  30% {
     opacity: 100%;
   }
-  35%{
+  35% {
     opacity: 0%;
   }
 }
-.example3d-item-1{
-
+.example3d-item-1 {
 }
-.example3d-item-2{
-  animation-delay: 6s;  
+.example3d-item-2 {
+  animation-delay: 6s;
 }
-.example3d-item-3{
-  animation-delay: 10s;  
+.example3d-item-3 {
+  animation-delay: 10s;
 }
-.example3d-item-4{
-  animation-delay: 14s;  
+.example3d-item-4 {
+  animation-delay: 14s;
 }
-.text-stroke{
+.text-stroke {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-    
 }

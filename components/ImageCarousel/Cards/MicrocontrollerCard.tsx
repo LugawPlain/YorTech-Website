@@ -1,5 +1,6 @@
 import EspressifLogo from "@/components/svgs/Espressif-logo";
 import LedLogo from "@/components/svgs/Led-Logo";
+import Link from "next/link";
 import React from "react";
 
 type props = {
@@ -8,9 +9,8 @@ type props = {
 const MicrocontrollerCard: React.FC<props> = ({ className = " " }) => {
   return (
     <div
-      className={` overflow-hidden w-[960px]flex relative  min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-t-2 shadow-2xl mb-4 transition-all duration-300 px-16 ${className}`}
+      className={`light text-textColor overflow-hidden w-[960px]flex relative  min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-t-2 shadow-2xl mb-4 transition-all duration-300 px-16 ${className}`}
     >
-      
       <h1 className="text-[48px] w-fit font-meduim mx-auto text-center py-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-black to-red-400">
         Micro-Controllers
       </h1>
@@ -37,7 +37,7 @@ const MicrocontrollerCard: React.FC<props> = ({ className = " " }) => {
             </h2>
           </div>
           <div className="h-36">
-            <h3 className="py-4 pt-8 text-center text-xl font-medium">
+            <h3 className="py-4 pt-8 text-center text-xl  font-medium">
               Controlling components using a simple arduino board
             </h3>
           </div>
@@ -93,14 +93,16 @@ const MicrocontrollerCard: React.FC<props> = ({ className = " " }) => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <button
-          className="group bg-neutral-800 px-4 pr-12 rounded-2xl py-4 h-fit underline decoration-1 decoration-white text-white underline-offset-2 outline outline-white -outline-offset-4 outline-1 
+        <Link href="/micro-controller">
+          <button
+            className="group bg-neutral-800 px-4 pr-12 rounded-2xl py-4 h-fit underline decoration-1 decoration-white text-white underline-offset-2 outline outline-white -outline-offset-4 outline-1 
         hover:transition-all hover:duration-300 hover:decoration-2 hover:underline-offset-4  hover:outline-green-300 hover:text-green-300 hover:decoration-green-300 hover:bg-black
         active:outline-2 active:duration"
-        >
-          <LedLogo className=" inline mr-8 " />
-          See more
-        </button>
+          >
+            <LedLogo className=" inline mr-8 " />
+            See more
+          </button>
+        </Link>
       </div>
     </div>
   );

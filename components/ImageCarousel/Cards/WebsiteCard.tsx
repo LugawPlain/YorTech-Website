@@ -9,6 +9,7 @@ import NextLogo from "@/components/svgs/Next-logo";
 import ReactLogo from "@/components/svgs/React-logo";
 import SassLogo from "@/components/svgs/Sass-Logo";
 import TailwindLogo from "@/components/svgs/Tailwind-logo";
+import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -17,7 +18,7 @@ type Props = {
 const WebsiteCard: React.FC<Props> = ({ className = " " }) => {
   return (
     <div
-      className={`w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-gray-300 shadow-2xl drop-shadow-2xl mb-4 transition-all duration-300 px-16 ${className}`}
+      className={`light text-textColor w-[960px] min-w-[960px] max-w-[960px] h-[550px] min-h-[550px] max-h-[550px] mx-auto rounded-2xl border border-gray-300 shadow-2xl drop-shadow-2xl mb-4 transition-all duration-300 px-16 ${className}`}
     >
       <h1 className="text-[48px] font-bold mx-auto text-center py-4 bg-clip-text bg-gradient-to-b from-yellow-100 to-yellow-600 text-transparent">
         Website Development
@@ -60,7 +61,7 @@ const WebsiteCard: React.FC<Props> = ({ className = " " }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GraphqlLogo className="hover:scale-125 transition-all ease-in-out duration-300" />
+          <GraphqlLogo className="hover:scale-125  transition-all ease-in-out duration-300" />
         </a>
 
         <a
@@ -119,7 +120,8 @@ const WebsiteCard: React.FC<Props> = ({ className = " " }) => {
           Designing user-interface (UI) and enchancing user experience
           (UX),Responsive and effective across different platforms
         </p>
-        <a>
+
+        <Link href="/website">
           <button
             className="bg-neutral-800 px-16 rounded-2xl py-4 mt-20 h-fit underline decoration-1 decoration-white text-white underline-offset-2 outline outline-white -outline-offset-4 outline-1 
         hover:transition-all hover:duration-300 hover:decoration-2 hover:underline-offset-4  hover:outline-yellow-300 hover:text-yellow-300 hover:decoration-yellow-300 hover:bg-black
@@ -127,7 +129,7 @@ const WebsiteCard: React.FC<Props> = ({ className = " " }) => {
           >
             See more
           </button>
-        </a>
+        </Link>
 
         <p className="w-64 border-l-2 pl-4">
           Managing database interactions and data storage and Ensuring security,

@@ -6,9 +6,10 @@ export default function Home() {
   return (
     <>
       <HeaderNav />
-      <div className="h-[calc(100vh-9rem)]">
+
+      <div className="h-screen w-full  ">
         <div className="bg-cover bg-no-repeat bg-[url('/Arduino-Background.jpg')] absolute block top-0 w-full -z-10 h-[100vh] text-white"></div>
-        <main className="text-white mt-16">
+        <main className="text-white mt-32">
           <section className="flex  flex-wrap w-full ">
             <div className="px-8 flex flex-col mx-auto text-center lg:text-start max-w-[700px]  ">
               <h1 className="text-4xl lg:text-[58px] font-medium leading-normal ">
@@ -43,8 +44,8 @@ export default function Home() {
       </div>
 
       <div
-        className="h-[700px] w-full isolate relative pt-4
-      before:inset-0  before:absolute before:opacity-90 before:white "
+        className="h-[700px] w-full isolate relative pt-12
+      before:inset-0  before:absolute before:opacity-90 before:white bg-primary "
       >
         {/* microcontroller card */}
         <ImageCarousel />

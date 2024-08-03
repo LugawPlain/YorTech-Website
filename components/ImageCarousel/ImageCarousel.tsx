@@ -44,7 +44,7 @@ const ImageCarousel = () => {
         <Design3dCard className={`bg-white shadow-red-500 card-${array[3]}`} />
         <Print3dCard className={`bg-white  card-${array[4]}`} />
       </div>
-      <div className="mx-auto flex justify-center items-center gap-4">
+      <div className="mx-auto flex justify-center items-center gap-4 mt-8">
         <button
           onClick={handlePrev}
           className="rounded-full text-[50px] h-[50px] w-[50px] animate-bounce-left border-2 border-black mr-16"
