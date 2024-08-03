@@ -3,6 +3,7 @@ import React from "react";
 import LogoNoBg from "./svgs/Logo-no-bg";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { DarkToggle } from "./DarkToggle";
 
 type props = {
   className?: string;
@@ -31,7 +32,7 @@ const HeaderNav: React.FC<props> = ({ className = " " }) => {
       className={`header-nav flex justify-between flex-wrap w-full fixed z-50 h-20 top-0 text-white overflow-hidden ${className}`}
     >
       <div
-        className={`absolute  bg-[#0d0f1c] transition-all duration-1000 w-full origin-top h-full  left-0 -z-10 ${
+        className={`absolute  bg-primary transition-all duration-1000 w-full origin-top h-full  left-0 -z-10 border-b-2 border-gray-200 ${
           sticky ? "opacity-95 block top-0  " : "-top-20"
         }`}
       ></div>
