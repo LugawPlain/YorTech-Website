@@ -34,8 +34,8 @@
     --ownSecondary: #000000;
     --textColor: #000000;
     --ownAccent: #00edf6;
-    --ownAccentLight: #e2e8f0;
-    --ownAccentDark: ##64748b;
+    --ownAccentLight: #4febf1;
+    --ownAccentDark: #00a1cd;
   }
 
   .dark {
@@ -65,11 +65,11 @@
     --chart-5: 340 75% 55%;
 
     --ownPrimary: #0d0f1c;
-    --ownSecondary: #ffffff;
+    --ownSecondary: #cbd5e1;
     --textColor: #000000;
-    --ownAccent: #00edf6;
-    --ownAccentLight: #e2e8f0;
-    --ownAccentDark: ##64748b;
+    --ownAccent: #08e2e9;
+    --ownAccentLight: #60f1f6;
+    --ownAccentDark: #07bcc3;
   }
 }
 

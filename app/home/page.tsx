@@ -1,14 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 import HeaderNav from "@/components/HeaderNav";
 import ImageCarousel from "@/components/ImageCarousel/ImageCarousel";
+import { useRef } from "react";
 export default function Home() {
+  const carouselRef = useRef<HTMLInputElement | null>(null);
   return (
     <>
-      <HeaderNav />
-      <div className="h-[calc(100vh-9rem)]">
+      <HeaderNav carouselRef={carouselRef} />
+
+      <div className="h-screen w-full  ">
         <div className="bg-cover bg-no-repeat bg-[url('/Arduino-Background.jpg')] absolute block top-0 w-full -z-10 h-[100vh] text-white"></div>
-        <main className="text-white mt-16">
+        <main className="text-white mt-32">
           <section className="flex  flex-wrap w-full ">
             <div className="px-8 flex flex-col mx-auto text-center lg:text-start max-w-[700px]  ">
               <h1 className="text-4xl lg:text-[58px] font-medium leading-normal ">
@@ -42,13 +44,8 @@ export default function Home() {
         </main>
       </div>
 
-      <div
-        className="h-[700px] w-full isolate relative pt-4
-      before:inset-0  before:absolute before:opacity-90 before:white "
-      >
-        {/* microcontroller card */}
-        <ImageCarousel />
-      </div>
+      {/* microcontroller card */}
+      <ImageCarousel ref={carouselRef} />
     </>
   );
 }

@@ -27,13 +27,14 @@ export default function Contacts() {
               className="h-48"
             ></Textarea>
           </div>
-
-          <Button
-            variant="outline"
-            className="mt-12 text-accent border-accent hover:bg-accentLight text-xl py-4 bg-card"
-          >
-            Submit
-          </Button>
+          <div className="px-52">
+            <Button
+              variant="outline"
+              className="mt-12 w-full text-accent border-4 hover:border-accentLight bg-inherit border-accent hover:bg-accentLight hover:text-primary active:bg-accentDark active:border-accentDark text-xl py-4 "
+            >
+              Submit
+            </Button>
+          </div>
         </div>
       </div>
     </>

@@ -1,16 +1,18 @@
 "use client";
-import React from "react";
+import React, { RefObject, useState, useEffect, useRef } from "react";
 import LogoNoBg from "./svgs/Logo-no-bg";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { DarkToggle } from "./DarkToggle";
+import { usePathname, useRouter } from "next/navigation";
 
 type props = {
   className?: string;
+  carouselRef?: RefObject<HTMLDivElement>;
 };
 
-const HeaderNav: React.FC<props> = ({ className = " " }) => {
+const HeaderNav: React.FC<props> = ({ className = " ", carouselRef }) => {
   const [sticky, setSticky] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 100) {
@@ -27,22 +29,35 @@ const HeaderNav: React.FC<props> = ({ className = " " }) => {
     };
   }, []);
 
+  const scrollToCarousel = () => {
+    if (carouselRef && carouselRef.current) {
+      carouselRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleService = () => {
+    if (pathname === "/home") {
+      scrollToCarousel();
+    } else {
+      router.push("/home");
+    }
+  };
+
   return (
     <header
       className={`header-nav flex justify-between flex-wrap w-full fixed z-50 h-20 top-0 text-white overflow-hidden ${className}`}
     >
       <div
-        className={`absolute  bg-primary transition-all duration-1000 w-full origin-top h-full  left-0 -z-10 border-b-2 border-gray-200 ${
-          sticky ? "opacity-95 block top-0  " : "-top-20"
+        className={`absolute bg-primary transition-all duration-1000 w-full origin-top h-full left-0 -z-10 border-b-2 border-gray-200 ${
+          sticky ? "opacity-95 block top-0" : "-top-20"
         }`}
       ></div>
 
-      <span className="group/logo  flex w-fit mx-auto">
-        <LogoNoBg className="group hover:cursor-pointer hover:scale-125 transition duration-200 ease-in-out " />
-        <span className="translate-x-8 origin-left duration-200 ease-linear group-hover/logo:scale-100 lg:scale-0 y-auto  font-medium bg-gray-800 rounded-md shadow-sm flex flex-col items-center justify-center my-1  px-4 ">
-          <h1 className="text-textcolor text-center ">
+      <span className="group/logo flex w-fit mx-auto">
+        <LogoNoBg className="group hover:cursor-pointer hover:scale-125 transition duration-200 ease-in-out" />
+        <span className="translate-x-8 origin-left duration-200 ease-linear group-hover/logo:scale-100 lg:scale-0 y-auto font-medium bg-gray-800 rounded-md shadow-sm flex flex-col items-center justify-center my-1 px-4">
+          <h1 className="text-textcolor text-center">
             Yor
-            <span className="text-transparent from-[#00EBF4] to-[#9c5bf6] bg-clip-text bg-gradient-to-b ">
+            <span className="text-transparent from-[#00EBF4] to-[#9c5bf6] bg-clip-text bg-gradient-to-b">
               Tech
             </span>
           </h1>
@@ -50,38 +65,33 @@ const HeaderNav: React.FC<props> = ({ className = " " }) => {
           <p className="m-0 text-nowrap">Your Ideas,Our Technology</p>
         </span>
       </span>
-      <nav className="flex py-4 text-textcolor text-lg  space-x-12 font-bold font-serif items-center mx-auto">
+      <nav className="flex py-4 text-textcolor text-lg space-x-12 font-bold font-serif items-center mx-auto">
         <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text
-       from-orange-300 to-orange-600 hover:text-transparent"
+          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
           href="/"
         >
           <h2>Home</h2>
         </Link>
-        <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text
-       from-orange-300 to-orange-600 hover:text-transparent"
-          href="#"
+        <button
+          onClick={handleService}
+          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
         >
           Service
-        </Link>
+        </button>
         <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text
-       from-orange-300 to-orange-600 hover:text-transparent"
+          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
           href="/contacts"
         >
           Contact
         </Link>
         <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text
-       from-orange-300 to-orange-600 hover:text-transparent"
+          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
           href="#"
         >
           About
         </Link>
         <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text
-       from-orange-300 to-orange-600 hover:text-transparent"
+          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
           href="#"
         >
           Account

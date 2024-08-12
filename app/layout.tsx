@@ -6,7 +6,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ThemeProvider } from "@/components/theme-provider";
 import { DarkToggle } from "@/components/DarkToggle";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["greek"] });
 export const metadata: Metadata = {
   title: "YorTech",
   description: "Your Ideas Our Technology",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.className} min-h-[100vh] relative bg-primary text-secondary  flex flex-col justify-center  `}
+        className={`${inter.className} min-h-[100vh] relative bg-fixed bg-cover bg-[url('/download2.jpg')] text-secondary  flex flex-col justify-center  `}
       >
         <ThemeProvider
           attribute="class"

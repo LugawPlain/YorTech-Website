@@ -96,7 +96,7 @@ const MicrocontrollerCard: React.FC<props> = ({ className = " " }) => {
         <Link href="/micro-controller">
           <button
             className="group bg-neutral-800 px-4 pr-12 rounded-2xl py-4 h-fit underline decoration-1 decoration-white text-white underline-offset-2 outline outline-white -outline-offset-4 outline-1 
-        hover:transition-all hover:duration-300 hover:decoration-2 hover:underline-offset-4  hover:outline-green-300 hover:text-green-300 hover:decoration-green-300 hover:bg-black
+        hover:transition-all hover:duration-300 hover:decoration-2 hover:underline-offset-4  hover:outline-green-300 hover:text-green-300 hover:decoration-green-300 hover:bg-black 
         active:outline-2 active:duration"
           >
             <LedLogo className=" inline mr-8 " />
