@@ -3,6 +3,9 @@ import React, { RefObject, useState, useEffect, useRef } from "react";
 import LogoNoBg from "./svgs/Logo-no-bg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import AccountLogo from "./svgs/Account-logo";
+
+import LoginButton from "./login-btn";
 
 type props = {
   className?: string;
@@ -47,7 +50,7 @@ const HeaderNav: React.FC<props> = ({ className = " ", carouselRef }) => {
       className={`header-nav flex justify-between flex-wrap w-full fixed z-50 h-20 top-0 text-white overflow-hidden ${className}`}
     >
       <div
-        className={`absolute bg-primary transition-all duration-1000 w-full origin-top h-full left-0 -z-10 border-b-2 border-gray-200 ${
+        className={`absolute bg-primary transition-all duration-1000 w-full origin-top h-full left-0 -z-10 border-b border-gray-300 ${
           sticky ? "opacity-95 block top-0" : "-top-20"
         }`}
       ></div>
@@ -66,36 +69,30 @@ const HeaderNav: React.FC<props> = ({ className = " ", carouselRef }) => {
         </span>
       </span>
       <nav className="flex py-4 text-textcolor text-lg space-x-12 font-bold font-serif items-center mx-auto">
-        <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
-          href="/"
-        >
+        <Link className="nav-items" href="/">
           <h2>Home</h2>
         </Link>
-        <button
-          onClick={handleService}
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
-        >
+        <button onClick={handleService} className="nav-items">
           Service
         </button>
-        <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
-          href="/contacts"
-        >
+        <Link className="nav-items" href="/contacts">
           Contact
         </Link>
-        <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
-          href="#"
-        >
-          About
+        <Link className="nav-items" href="#">
+          <p>About</p>
         </Link>
-        <Link
-          className="hover:drop-shadow-[0px_0px_10px__rgba(249,115,22,1)] hovertext hover:bg-gradient-to-r bg-clip-text from-orange-300 to-orange-600 hover:text-transparent"
-          href="#"
-        >
-          Account
+        <Link className="relative" href="#">
+          <button
+            type="button"
+            // key={provider.name}
+            // onClick={() => signIn(provider.id)}
+            className="relative sign-in-btn text-nowrap"
+          >
+            Sign In
+          </button>
         </Link>
+        {/* <SignIn /> */}
+        <LoginButton />
       </nav>
     </header>
   );

@@ -5,7 +5,7 @@ import WebsiteCard from "./Cards/WebsiteCard";
 import CircuitryCard from "./Cards/CircuitryCard";
 import Design3dCard from "./Cards/3dDesignCard";
 import Print3dCard from "./Cards/3dPrintCard";
-
+import "../../app/styles/Animation.css";
 type ImageCarouselProps = {};
 
 const ImageCarousel: ForwardRefRenderFunction<
@@ -50,14 +50,16 @@ const ImageCarousel: ForwardRefRenderFunction<
           className={`bg-white shadow-teal-500 card-${array[0]}`}
         />
         <WebsiteCard className={`bg-white shadow-amber-200 card-${array[1]}`} />
-        <CircuitryCard className={`bg-white shadow-black card-${array[2]}`} />
+        <CircuitryCard
+          className={`bg-white shadow-purple-800 card-${array[2]}`}
+        />
         <Design3dCard className={`bg-white shadow-red-500 card-${array[3]}`} />
-        <Print3dCard className={`bg-white card-${array[4]}`} />
+        <Print3dCard className={`bg-white shadow-sky-500 card-${array[4]}`} />
       </div>
       <div className="mx-auto flex justify-center items-center gap-4 mt-8">
         <button
           onClick={handlePrev}
-          className="rounded-full text-[50px] h-[50px] w-[50px] animate-bounce-left border-2 border-black mr-16"
+          className="rounded-full text-[50px] h-[50px] w-[50px] animate-bounce-left border-2 border-white mr-16"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,13 +81,13 @@ const ImageCarousel: ForwardRefRenderFunction<
             onClick={() => handleButton(item, index)}
             key={index}
             className={`${
-              array[index] == 1 ? "bg-gray-600" : "bg-gray-300"
-            } w-3 h-3 rounded-full hover:outline hover:outline-black  hover:outline-offset-2 z-10`}
+              array[index] == 1 ? "bg-slate-400" : "bg-gray-300"
+            } w-3 h-3 rounded-full hover:outline hover:outline-sky-300  hover:outline-offset-2 z-10`}
           />
         ))}
         <button
           onClick={handleNext}
-          className="rounded-full text-[50px] h-[50px] w-[50px] animate-bounce-right border-2 border-black ml-16"
+          className="rounded-full text-[50px] h-[50px] w-[50px] animate-bounce-right border-2 border-white ml-16"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

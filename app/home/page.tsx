@@ -1,15 +1,34 @@
 "use client";
 import HeaderNav from "@/components/HeaderNav";
 import ImageCarousel from "@/components/ImageCarousel/ImageCarousel";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 export default function Home() {
   const carouselRef = useRef<HTMLInputElement | null>(null);
+  const [darken, setDarken] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100) {
+        setDarken(true);
+      } else {
+        setDarken(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <HeaderNav carouselRef={carouselRef} />
 
       <div className="h-screen w-full  ">
-        <div className="bg-cover bg-no-repeat bg-[url('/Arduino-Background.jpg')] absolute block top-0 w-full -z-10 h-[100vh] text-white"></div>
+        <div
+          className={`${
+            darken ? "opacity-50" : ""
+          } transition-all duration-1000 bg-cover bg-no-repeat bg-[url('/Arduino-Background.jpg')] absolute block top-0 w-full -z-10 h-[100vh] text-white`}
+        ></div>
         <main className="text-white mt-32">
           <section className="flex  flex-wrap w-full ">
             <div className="px-8 flex flex-col mx-auto text-center lg:text-start max-w-[700px]  ">

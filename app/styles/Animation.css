@@ -1,0 +1,78 @@
+@keyframes bounce-left {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  50% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+.animate-bounce-left {
+  animation: bounce-left 3s infinite;
+}
+@keyframes bounce-right {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  50% {
+    transform: translateX(25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+.animate-bounce-right {
+  animation: bounce-right 3s infinite;
+}
+@keyframes left-to-right {
+  0%,
+  100% {
+    transform: translate(-100px);
+    background-image: linear-gradient(to left, #e5ab47, #fde10c, #4b5563);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  99% {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 255, 238),
+      rgb(98, 174, 255),
+      #4b5563
+    );
+  }
+}
+.animate-left-to-right {
+  animation: left-to-right 4s linear infinite;
+}
+.animate-example3d {
+  animation: example3d 20s linear infinite;
+}
+@keyframes example3d {
+  0%,
+  100% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 100%;
+  }
+  30% {
+    opacity: 100%;
+  }
+  35% {
+    opacity: 0%;
+  }
+}
+.example3d-item-1 {
+}
+.example3d-item-2 {
+  animation-delay: 6s;
+}
+.example3d-item-3 {
+  animation-delay: 10s;
+}
+.example3d-item-4 {
+  animation-delay: 14s;
+}
