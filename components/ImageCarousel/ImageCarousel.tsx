@@ -33,8 +33,6 @@ const ImageCarousel: ForwardRefRenderFunction<
   };
 
   const handleButton = (item: number, index: number) => {
-    console.log(index);
-    console.log(item);
     for (let i = 0; i < item - 1; i++) {
       handleNext();
     }

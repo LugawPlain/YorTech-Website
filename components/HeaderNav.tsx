@@ -3,9 +3,7 @@ import React, { RefObject, useState, useEffect, useRef } from "react";
 import LogoNoBg from "./svgs/Logo-no-bg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import AccountLogo from "./svgs/Account-logo";
-
-import LoginButton from "./login-btn";
+import LoginButton from "./auth/Login-button";
 
 type props = {
   className?: string;
@@ -81,7 +79,7 @@ const HeaderNav: React.FC<props> = ({ className = " ", carouselRef }) => {
         <Link className="nav-items" href="#">
           <p>About</p>
         </Link>
-        <Link className="relative" href="#">
+        <LoginButton>
           <button
             type="button"
             // key={provider.name}
@@ -90,9 +88,7 @@ const HeaderNav: React.FC<props> = ({ className = " ", carouselRef }) => {
           >
             Sign In
           </button>
-        </Link>
-        {/* <SignIn /> */}
-        <LoginButton />
+        </LoginButton>
       </nav>
     </header>
   );
